@@ -1,0 +1,87 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 8vh 0;
+  background-color: white;
+  min-height: 115vh;
+  max-height: 150%;
+}
+
+img {
+  width: 50%;
+  height: auto;
+  border: 8px double black;
+  position: relative;
+  border-radius: 10%;
+}
+
+h2 {
+  padding-top: 5%;
+}
+
+p {
+  text-align: center;
+  padding: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  img {
+    border-radius: 50%;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  button {
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  p {
+    padding: 5% 8%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 115%;
+  }
+  body {
+    min-height: 100vh;
+    max-height: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 120%;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  button {
+    height: 9vh;
+  }
+}
+
+@media screen and (max-height: 768px) and (min-height: 600px) {
+  button {
+    height: 10vh;
+  }
+}
+/*# sourceMappingURL=main.css.map */

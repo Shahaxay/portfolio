@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="../external.css">
+    <link rel="stylesheet" href="./main.css">
+    <script>
+        function DownloadFile(fileName) {
+            //Set the File URL.
+            var url = "Files/" + fileName;
+
+            //Create XMLHTTP Request.
+            var req = new XMLHttpRequest();
+            req.open("GET", url, true);
+            req.responseType = "blob";
+            req.onload = function () {
+                //Convert the Byte Data to BLOB object.
+                var blob = new Blob([req.response], { type: "application/octetstream" });
+
+                //Check the Browser type and download the File.
+                var isIE = false || !!document.documentMode;
+                if (isIE) {
+                    window.navigator.msSaveBlob(blob, fileName);
+                } else {
+                    var url = window.URL || window.webkitURL;
+                    link = url.createObjectURL(blob);
+                    var a = document.createElement("a");
+                    a.setAttribute("download", fileName);
+                    a.setAttribute("href", link);
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                }
+            };
+            req.send();
+        };
+    </script>
+</head>
+
+<body>
+    <img src="./mypic_crop.jpg" alt="mypic">
+    <h2>let me introduce my self</h2>
+    <p>I am a computer science engineering final year student. I'm interested in web development as well as android
+        development.I have completed some projects related to the same. I like doing projects. I can design and make
+        responsive websites, web applications,android applications. I can handle both frontend and backend . I can learn
+        new things quickly and can work on
+        it.</p>
+    <p>I'm also a programmer with good problem solving skills. I love working in different fields and technologies.
+        I can actively contribute to any project related to these fields.</p>
+    <p>Currently I'm working as a freelancer and I'm looking to take on projects.</p>
+    <p>Email me in :<a href="mailto:shahaxay34@gmail.com"
+            style="color:brown ;text-decoration:none;">shahaxay34@gmail.com</a>
+    </p>
+    <button onclick="DownloadFile('resume.pdf')">download cv</button>
+    <br>
+</body>
+
+</html>

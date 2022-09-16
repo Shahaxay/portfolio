@@ -1,0 +1,95 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+@mixin size {
+  height: 100vh;
+  width: 50vw;
+}
+.intro {
+  @include size();
+  text-align: center;
+  line-height: 1.5;
+  display: grid;
+  place-items: center;
+}
+button {
+  margin-top: 15%;
+  width: 100%;
+}
+button:hover{
+    border:.2rem solid #06050b;
+    background-color: #97c2db;
+    color: white;
+    border-radius: .5rem;
+}
+img {
+  @include size();
+  float: right;
+  object-fit: contain;
+}
+@media screen and(max-width:600px){
+    body{
+        flex-direction: column;
+    }
+    .intro{
+        width: 100%;
+        background-image: url("./mypic.png");
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    img{
+        position:absolute;
+        visibility: hidden;
+    }
+}
+//from small device like potrate tab
+@media screen and(min-width:600px){
+    body{
+        background-image:url("./portfolioB.jpg");
+        background-size: cover;
+        background-position: left;
+    } 
+    .white,h2{
+        color: white;
+    }
+}
+//medium
+@media screen and (min-width:769px){
+    html{
+        font-size: 115%;
+    }
+}
+//large
+@media screen and (min-width:993px){
+    html{
+        font-size: 130%;
+    }
+}
+//extra large 
+@media screen and (min-width:1200px)and (min-height:1200px){
+    html{
+        font-size: 145%;
+    }
+    button{
+        width: 45%;
+        height: 13vh;
+    }
+}
+@media screen and (max-height:900px)and (max-width:600px){
+    button{
+      height: 11vh;
+    }
+  }
+//sweet alert2
+.swal2-popup{
+    max-height:90vh;
+    max-width:90vw;
+}
+.swal2-styled.swal2-confirm{
+    width: 15vw;
+    background-color: #97c2db;
+}

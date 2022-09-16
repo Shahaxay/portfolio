@@ -1,0 +1,241 @@
+$delay:.142s;
+$java:80%;$python:85%;$c:80%;$cpp:85%;$html:95%;$css:95%;$js:80%;$nodejs:70%;$mongodb:70%;$mysql:80%;$php:80%;$wd:90%;$wad:85%;$aad:90%;$fd:95%;$bd:85%;$ps:80%;
+body{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    min-height: 100vh;
+    max-height: 150%;
+    line-height: 1.5;
+    overflow-x: hidden;
+    text-transform: capitalize;
+    padding:8vh 1vh;
+    background-color: white;
+}
+h2{
+    font-size: 3.5rem;
+}
+.knowledge{
+    width: 50%;
+}
+.skill{
+    width: 50%;
+}
+li{
+    border: 1px solid black;
+    width: 95%;
+    margin-top: .5rem;
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    background-color:black;
+    z-index: 0;
+    border-radius: 1rem;
+    font-size: 2rem;
+    padding: .14rem .2rem;
+   
+}
+li::after{
+    content:"";
+    position: absolute;
+    height: 100%;
+    background-color: rgb(4, 180, 4);
+    animation: slide 1s  linear 1;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.knowledge li:nth-child(1)::after{
+    width:$java;
+    animation-delay: $delay;
+}
+.knowledge li:nth-child(2)::after{
+    width:$python;
+    animation-delay: 2*$delay;
+}
+.knowledge li:nth-child(3)::after{
+    width:$c;
+    animation-delay: 3*$delay;
+}
+.knowledge li:nth-child(4)::after{
+    width:$cpp;
+    animation-delay: 4*$delay;
+}
+.knowledge li:nth-child(5)::after{
+    width:$html;
+    animation-delay: 5*$delay;
+}
+.knowledge li:nth-child(6)::after{
+    width:$css;
+    animation-delay: 6*$delay;
+}
+.knowledge li:nth-child(7)::after{
+    width:$js;
+    animation-delay: 7*$delay;
+}
+.knowledge li:nth-child(8)::after{
+    width:$nodejs;
+    animation-delay: 8*$delay;
+}
+.knowledge li:nth-child(9)::after{
+    width:$mongodb;
+    animation-delay: 9*$delay;
+}
+.knowledge li:nth-child(10)::after{
+    width:$mysql;
+    animation-delay: 10*$delay;
+}
+.knowledge li:nth-child(11)::after{
+    width:$php;
+    animation-delay: 11*$delay;
+}
+.skill li:nth-child(1)::after{
+    animation-delay: 12*$delay;
+    width:$wd;
+}
+.skill li:nth-child(2)::after{
+    animation-delay: 13*$delay;
+    width:$wad;
+}
+.skill li:nth-child(3)::after{
+    animation-delay: 14*$delay;
+    width:$aad;
+}
+.skill li:nth-child(4)::after{
+    animation-delay: 15*$delay;
+    width:$fd;
+}.skill li:nth-child(5)::after{
+    animation-delay: 16*$delay;
+    width:$bd;
+}
+.skill li:nth-child(6)::after{
+    animation-delay: 16*$delay;
+    width:$bd;
+}
+
+@keyframes slide {
+    0%{
+left:-100%
+    }
+    100%{
+left:0;
+    }
+    
+}
+li::before{
+    height: 100%;
+    width: 15%;
+    position: absolute;
+    right: 0%;
+    color:white;
+}
+.knowledge li:nth-child(1)::before{
+    content: "80%";
+}
+.knowledge li:nth-child(2)::before{
+    content: "85%";
+}
+.knowledge li:nth-child(3)::before{
+    content: "80%";
+}
+.knowledge li:nth-child(4)::before{
+    content: "85%";
+}
+.knowledge li:nth-child(5)::before{
+    content: "95%";
+}
+.knowledge li:nth-child(6)::before{
+    content: "95%";
+}
+.knowledge li:nth-child(7)::before{
+    content: "80%";
+}
+.knowledge li:nth-child(8)::before{
+    content: "70%";
+}
+.knowledge li:nth-child(9)::before{
+    content: "70%";
+}
+.knowledge li:nth-child(10)::before{
+    content: "80%";
+}
+.knowledge li:nth-child(11)::before{
+    content: "80%";
+}
+.skill li:nth-child(1)::before{
+    content: "90%";
+}
+.skill li:nth-child(2)::before{
+    content: "85%";
+}
+.skill li:nth-child(3)::before{
+    content: "90%";
+}
+.skill li:nth-child(4)::before{
+    content: "95%";
+}
+.skill li:nth-child(5)::before{
+    content: "80%";
+}
+.skill li:nth-child(6)::before{
+    content: "80%";
+}
+@media screen and (max-width:600px) {
+    body{
+        flex-direction: column;
+        // justify-content: space-around;
+        min-height: 100%;
+        max-height: 300%;
+        padding-bottom: 10%;
+    }
+    .skill,.knowledge{
+        width: 90%;
+    }
+    html{
+        font-size: 75%;
+    }
+    h2{
+        margin-top: 10%;
+    }
+}
+//medium(landscape tab)
+@media screen and (min-width:769px){
+    html{
+        font-size: 105%;
+    }
+    li{
+        height: 3.5rem;
+    }
+}
+//large(laptop)
+@media screen and(min-width:992px){
+html{
+    font-size: 110%;
+}
+li{
+    height: 4rem;
+}
+}
+//very large
+@media screen and (min-width:1200px){
+    html{
+        font-size: 120%;
+    }
+    li{
+        height: 4.5rem;
+    }
+}
+//controlling font with respect to height of the devide
+@media screen and (max-height:760px){
+    html{
+        font-size:70%;
+    }
+    @media screen and (max-height:600px){
+        html{
+            font-size:60%;
+        }
+    }
+}

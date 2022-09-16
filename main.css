@@ -1,0 +1,286 @@
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.navholder,
+.navBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.navBar {
+  width: 24%;
+  height: 100vh;
+  background-color: #424646;
+  border: 1px solid black;
+  float: left;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: capitalize;
+}
+
+.nav {
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem;
+  -webkit-animation: navAnimation linear 1;
+          animation: navAnimation linear 1;
+  position: relative;
+  background-color: rgba(139, 112, 112, 0.4);
+  margin-top: 0.5rem;
+  font-size: 2rem;
+}
+
+.nav:hover {
+  color: #aed1e5;
+  background-color: #9c6666;
+}
+
+.logo {
+  background-color: #9c6666;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 0.4rem black;
+          box-shadow: 0 0.4rem black;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-size: 3rem;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  border: 6px solid white;
+}
+
+@-webkit-keyframes navAnimation {
+  0% {
+    left: -100%;
+  }
+  80% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes navAnimation {
+  0% {
+    left: -100%;
+  }
+  80% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.nav:nth-child(1) {
+  -webkit-animation-duration: .8s;
+          animation-duration: .8s;
+}
+
+.nav:nth-child(2) {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.nav:nth-child(3) {
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+}
+
+.nav:nth-child(4) {
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+}
+
+.nav:nth-child(5) {
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+}
+
+.nav:nth-child(6) {
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+}
+
+.nav:nth-child(7) {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.frame {
+  width: 76%;
+  height: 100vh;
+  float: right;
+  border: 1px solid black;
+}
+
+iframe {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow-y: scroll;
+}
+
+.footer {
+  text-align: center;
+  color: white;
+  line-height: 1.4;
+}
+
+.footer p,
+.footer i {
+  font-size: 1.5rem;
+}
+
+.footer a {
+  color: white;
+  margin: 0 0.25rem;
+}
+
+.footer a:hover {
+  color: #aed1e5;
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 74%;
+  }
+}
+
+@media screen and (max-width: 600px) and (min-width: 400px) {
+  html {
+    font-size: 85%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navBar {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .nav {
+    margin-left: 1%;
+    margin-top: 0;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 5.5rem;
+    width: 5.5rem;
+    font-size: 2rem;
+    z-index: 1;
+    position: relative;
+    top: 1.25rem;
+  }
+  .navBar, .navholder {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .navBar {
+    height: 8vh;
+    width: 98%;
+    float: none;
+    position: fixed;
+    left: 1%;
+    z-index: 2;
+  }
+  .footer {
+    display: none;
+  }
+  .frame {
+    position: absolute;
+    width: 100%;
+    border-top: 4px solid gray;
+    height: 96vh;
+    padding-top: 4vh;
+    bottom: 0;
+    overflow-y: scroll;
+  }
+  .nav {
+    margin-left: 2%;
+    margin-top: 0;
+  }
+  .nav a {
+    font-size: 2rem;
+  }
+  @-webkit-keyframes navAnimation {
+    0% {
+      top: -100%;
+      color: black;
+    }
+    80% {
+      top: -100%;
+    }
+    100% {
+      top: 0;
+      color: green;
+    }
+  }
+  @keyframes navAnimation {
+    0% {
+      top: -100%;
+      color: black;
+    }
+    80% {
+      top: -100%;
+    }
+    100% {
+      top: 0;
+      color: green;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .navBar {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  html {
+    font-size: 70%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 85%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 95%;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .logo {
+    height: 5.5rem;
+    width: 5.5rem;
+  }
+  html {
+    font-size: 80%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

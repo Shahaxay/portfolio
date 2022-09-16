@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <script src="https://kit.fontawesome.com/4d52ab6849.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../external.css">
+    <link rel="stylesheet" href="./main.css">
+    <script>
+        function sendmail() {
+            var name = document.getElementById("name").value;
+            var cname = document.getElementById("cname").value;
+            var project = document.getElementById("category").selectedOptions[0].value;
+            var breif = document.getElementById("intro").value;
+            var mailbody = "Project Category:%0d%0a"+project+"%0d%0a%0d%0a"+"Project breief:%0d%0a"+breif+"%0d%0a%0d%0a"+"Regards"+"%0d%0a"+name+"%0d%0a"+cname;
+            location.href = "mailto:shahaxay34@gmail.com?subject=Got a Project&body="+mailbody;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>This is the time to startup</h2>
+    <p style="padding:0 5%">-feel free to contact me to discuss your project and hier for your project</p>
+    <form action="#">
+        <input type="text" placeholder="Your Name" id="name">
+        <input type="text" placeholder="Company Name" id="cname">
+        <select name="category" id="category">
+            <option value="">Select Project Category</option>
+            <option value="website">website</option>
+            <option value="web application">Web application</option>
+            <option value="android app development">Android app development</option>
+            <option value="frontend Development">Frontend Development</option>
+            <option value="backend Development">Backend Development</option>
+        </select>
+        <label for="projectDescription" style="text-align:left ;">Brief Intro Of Project</label>
+        <textarea rows="5" name="projectDescription" id="intro"></textarea>
+        <button onclick="sendmail()">contact me</button>
+    </form>
+    <div class="footer">
+        <p ><b>© 2022 Akshay Sah © Akk.ltd</b></p>
+        <h3>stay connected</h3>
+        <a href="https://www.instagram.com/axayshah34/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/akshay.shah.75436531"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://github.com/Shahaxay"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sahAkshay/"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+</body>
+
+</html>
