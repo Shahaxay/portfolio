@@ -47,13 +47,17 @@ p {
   }
   button {
     font-size: 1.5rem;
-    padding: 1rem .5rem;
+    padding: .5rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   p {
     padding: 5% 8%;
+  }
+  body {
+    min-height: 90vh;
+    max-height: 100%;
   }
 }
 
@@ -73,15 +77,15 @@ p {
   }
 }
 
-@media screen and (max-height: 600px) {
-  button {
-    height: 9vh;
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 130%;
   }
 }
 
-@media screen and (max-height: 768px) and (min-height: 600px) {
+@media screen and (max-height: 600px) {
   button {
-    height: 10vh;
+    height: 3.5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

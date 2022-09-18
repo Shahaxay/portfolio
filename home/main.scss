@@ -76,20 +76,22 @@ img {
     }
     button{
         width: 45%;
-        height: 13vh;
+        height: 14vh;
     }
 }
 @media screen and (max-height:900px)and (max-width:600px){
     button{
-      height: 10vh;
+      height:3.5rem;
     }
   }
 //sweet alert2
 .swal2-popup{
-    max-height:90vh;
-    max-width:90vw;
+    height: 100%;
+    margin-top: 3rem;
 }
 .swal2-styled.swal2-confirm{
     width: 15vw;
+    height: 3rem;
     background-color: #97c2db;
 }
+
