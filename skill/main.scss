@@ -113,7 +113,7 @@ li::after{
 }
 .skill li:nth-child(6)::after{
     animation-delay: 16*$delay;
-    width:$bd;
+    width:$ps;
 }
 
 @keyframes slide {
