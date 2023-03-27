@@ -1,5 +1,5 @@
 $delay:.142s;
-$java:80%;$python:85%;$c:80%;$cpp:85%;$html:95%;$css:95%;$js:80%;$nodejs:70%;$mongodb:70%;$mysql:80%;$php:80%;$wd:90%;$wad:85%;$aad:90%;$fd:95%;$bd:85%;$ps:80%;
+$java:80%;$python:85%;$c:70%;$cpp:90%;$html:95%;$css:95%;$js:80%;$nodejs:70%;$mongodb:70%;$mysql:80%;$php:50%;$wd:85%;$wad:80%;$aad:70%;$fd:95%;$bd:70%;$ps:80%;
 body{
     display: flex;
     justify-content:flex-start;
@@ -139,10 +139,10 @@ li::before{
     content: "85%";
 }
 .knowledge li:nth-child(3)::before{
-    content: "80%";
+    content: "70%";
 }
 .knowledge li:nth-child(4)::before{
-    content: "85%";
+    content: "90%";
 }
 .knowledge li:nth-child(5)::before{
     content: "95%";
@@ -163,22 +163,22 @@ li::before{
     content: "80%";
 }
 .knowledge li:nth-child(11)::before{
-    content: "80%";
+    content: "50%";
 }
 .skill li:nth-child(1)::before{
-    content: "90%";
-}
-.skill li:nth-child(2)::before{
     content: "85%";
 }
+.skill li:nth-child(2)::before{
+    content: "80%";
+}
 .skill li:nth-child(3)::before{
-    content: "90%";
+    content: "70%";
 }
 .skill li:nth-child(4)::before{
     content: "95%";
 }
 .skill li:nth-child(5)::before{
-    content: "80%";
+    content: "70%";
 }
 .skill li:nth-child(6)::before{
     content: "80%";
